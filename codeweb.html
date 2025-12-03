@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors - C++ Code</title>
+    <style>
+        body {
+            font-family: monospace;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+        pre {
+            background-color: #1e1e1e;
+            color: #dcdcdc;
+            padding: 20px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Rock Paper Scissors - C++ Code</h1>
+    <pre>
+#include &lt;iostream&gt;
+#include &lt;ctime&gt;
+#include &lt;string&gt;
+using namespace std;
+
+int choice;
+void computer();
+void player();
+string r = "rock";
+string p = "paper";
+string s = "scissors";
+
+int main(){
+    srand(time(0));
+    cout &lt;&lt; "Rock Paper Scissors\n";
+    cout &lt;&lt; "1 = Rock\n2 = Paper\n3 = Scissors\n";
+    player();
+    computer();
+}
+
+void player(){
+    do{
+        cin &gt;&gt; choice;
+        switch(choice){
+            case 1:
+                cout &lt;&lt; "\nPLAYER'S CHOICE\nP1 has chosen " &lt;&lt; r &lt;&lt; endl;
+                cout &lt;&lt; "====================\n";
+                break;
+            case 2:
+                cout &lt;&lt; "\nPLAYER'S CHOICE\nP1 has chosen " &lt;&lt; p &lt;&lt; endl;
+                cout &lt;&lt; "====================\n";
+                break;
+            case 3:
+                cout &lt;&lt; "\nPLAYER'S CHOICE\nP1 has chosen " &lt;&lt; s &lt;&lt; endl;
+                cout &lt;&lt; "====================\n";
+                break;
+            default:
+                cout &lt;&lt; "\nPLAYER'S CHOICE\nInvalid choice\n====================\n";
+        }
+    } while(choice &gt; 3);
+}
+
+void computer(){
+    int randnum = rand() % 3 + 1;
+    switch(randnum){
+        case 1:
+            cout &lt;&lt; "COMPUTER'S CHOICE\nP2 has chosen " &lt;&lt; r &lt;&lt; endl;
+            cout &lt;&lt; "====================\n";
+            break;
+        case 2:
+            cout &lt;&lt; "COMPUTER'S CHOICE\nP2 has chosen " &lt;&lt; p &lt;&lt; endl;
+            cout &lt;&lt; "====================\n";
+            break;
+        case 3:
+            cout &lt;&lt; "COMPUTER'S CHOICE\nP2 has chosen " &lt;&lt; s &lt;&lt; endl;
+            cout &lt;&lt; "====================\n";
+            break;
+    }
+
+    if((randnum == 1 && choice == 2) || 
+       (randnum == 2 && choice == 3) || 
+       (randnum == 3 && choice == 1)){
+        cout &lt;&lt; "RESULT\n==============\nYou won\n";
+    } else if((randnum == 1 && choice == 3) || 
+              (randnum == 2 && choice == 1) || 
+              (randnum == 3 && choice == 2)){
+        cout &lt;&lt; "RESULT\n==============\nComputer won\n";
+    } else {
+        cout &lt;&lt; "RESULT\n==============\nTie\n";
+    }
+}
+    </pre>
+</body>
+</html>
