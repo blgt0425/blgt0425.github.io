@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to My First Webpage</title>
+    <title>Blgt's Webpage</title>
     <style>
 @import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
         body {
@@ -17,27 +17,44 @@
             color: #00D904;
         }
         p {
+            font-family: Goldman, Serif;
             color: #00D904;
         }
         searching {
             color: #00D904;
             font-size: 20px;
         }
-        input[type="text"] {
-   width: 15%;
-   padding: 4px 10px;
-   margin: 12px 0;
-   box-sizing: border-box;
-   background-color: #1C1C1C;
-   border: 2px solid #00D904;
+img{
+    width: 2.5%;
+    position: relative;
+    right: 15px;
+    top: 12px;
 }
+button {
+    width: 7.5%;
+    line-height: 2%;
+    position: relative;
+    left: 15px;
+    border: 1.5px dashed #00D904;
+    background-color: black;
+    color: white;
+    transition: background-color 0.15s ease;
+}
+button:hover {
+    background-color: #041c00;
+}
+sl {
+     font-family: Goldman, Serif;
+     font-size: 15px;
     </style>
 </head>
 
 <body>
-    <h1>Welcome! This is My First Webpage</h1>
-    <p>I'm excited to start learning and building websites.</p>
-    <p>My C++ Projects:<p>
-    <searching>Search ><input type="text"><br></searching>
+    <h1>Welcome! This is Blgt's Webpage</h1>
+    <p><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png alt=c++logo>My C++ Projects:<p>
+        <sl>1. Rock Paper Scissors</sl>
+        <a href="RockPaperScissors.zip" download>
+    <button class="btn"><p>Download</p></button>
+</a>
 </body>
 </html>
