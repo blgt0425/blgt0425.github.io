@@ -1,6 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
+#include <conio.h>
 using namespace std;
 int health1 = 1;
 int health2 = 1;
@@ -17,7 +18,7 @@ void player1(){
 	if( shoot == 1 ){
 		cout<<"Game Over. You won!\n";
 		health2--;
-		exit(0);
+		cout<<endl;
 	} else {
 		cout<<"You survived!\n";
 		cout<<endl;
@@ -30,7 +31,7 @@ void computer(){
 	if( shoot1 == 1 ){
 		cout<<"Game Over. You lost!\n";
 		health1--;
-		exit(0);
+		cout<<endl;
 	} else {
 		cout<<"Opponent survied!\n";
 		cout<<endl;
@@ -50,5 +51,8 @@ int main(){
 		break;
 	}
 } while( health1 != 0 || health2 != 0 );
+cout<<endl;
+cout<<"Enter to exit.\n";
+getch();
 	return 0;
 }
