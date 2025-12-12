@@ -16,8 +16,8 @@ void player1(){
 	} while(choice != 1);
 	shoot = rand() % 2;
 	if( shoot == 1 ){
-		cout<<"Game Over. You won!\n";
-		health2--;
+		cout<<"Game Over. You lost!\n";
+		health1--;
 		cout<<endl;
 	} else {
 		cout<<"You survived!\n";
@@ -29,8 +29,8 @@ void computer(){
 	cout<<"=================="<<endl;
 	shoot1 = rand() % 2;
 	if( shoot1 == 1 ){
-		cout<<"Game Over. You lost!\n";
-		health1--;
+		cout<<"Game Over. You won!\n";
+		health2--;
 		cout<<endl;
 	} else {
 		cout<<"Opponent survied!\n";
