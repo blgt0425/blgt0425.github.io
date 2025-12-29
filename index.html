@@ -1,69 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blgt's Webpage</title>
-    <style>
-@import url('https://fonts.googleapis.com/css2?family=Goldman&display=swap');
-        body {
-            font-family: Goldman, Serif;
-            background: black;
-            text-align: center;
-            padding-top: 60px;
-            font-size: 30px;
-        }
-        h1 {
-            color: #00D904;
-        }
-        p {
-            font-family: Goldman, Serif;
-            color: #00D904;
-        }
-        searching {
-            color: #00D904;
-            font-size: 20px;
-        }
-img{
-    width: 2.5%;
-    position: relative;
-    right: 15px;
-    top: 12px;
-}
-button {
-    width: 5%;
-    line-height: 1.75%;
-    position: relative;
-    left: 15px;
-    border: 1.5px dashed #00D904;
-    background-color: black;
-    color: white;
-    transition: background-color 0.15s ease;
-}
-button:hover {
-    background-color: #041c00;
-}
-sl {
-     font-family: Goldman, Serif;
-     font-size: 15px;
- }
- video{
-    border: 1.5px solid #00D904;
-    lighting-color: white;
- }
-    </style>
+<title>Page</title>
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <h1>Welcome! This is Blgt's Webpage</h1>
-    <video width="320" height="240" controls muted>
-  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
-    <p><img src=https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1822px-ISO_C%2B%2B_Logo.svg.png alt=c++logo>My C++ Projects:<p>
-        <sl>1. Rock Paper Scissors</sl>
-        <a href="codeweb.html">
-    <button class="btn"><p>See</p></button>
-</a>
+<div id="calculator">
+<input id="display" readonly>
+<div id="buttons">
+<button onclick="appenddisplay('+')">+</button>
+<button onclick="appenddisplay('7')">7</button>
+<button onclick="appenddisplay('8')">8</button>
+<button onclick="appenddisplay('9')">9</button>
+<button onclick="appenddisplay('-')">-</button>
+<button onclick="appenddisplay('4')">4</button>
+<button onclick="appenddisplay('5')">5</button>
+<button onclick="appenddisplay('6')">6</button>
+<button onclick="appenddisplay('*')">*</button>
+<button onclick="appenddisplay('1')">1</button>
+<button onclick="appenddisplay('2')">2</button>
+<button onclick="appenddisplay('3')">3</button>
+<button onclick="appenddisplay('/')">/</button>
+<button onclick="appenddisplay('0')">0</button>
+<button onclick="appenddisplay('.')">.</button>
+<button onclick="appenddisplay('3.141592653589')"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfDumRHWwwq4KuO37B7B4sGKOGgMe4pvDq_Q&s" alt="pi"></button>
+<button onclick="calculate()">=</button>
+<button onclick="cleardisplay()">C</button>
+</div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
